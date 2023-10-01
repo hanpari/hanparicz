@@ -9,9 +9,14 @@ SOURCEDIR     = source
 BUILDDIR      = www
 
 
+# Aktivuje virtuální prostředí pro Python
+python:
+	source env310/bin/activate
+
+
 # Spusti lokalni prohlizeni www stranek 
 show:
-	python3 -m http.server --directory www/html
+	python3 -m http.server 8001 --directory www/html  
 
 # Put it first so that "make" without argument is like "make help".
 help:
